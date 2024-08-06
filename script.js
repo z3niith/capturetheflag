@@ -6,7 +6,7 @@ function checkFlag() {
     const wrongSound = document.getElementById('wrong-sound');
 
     const flags = [
-        'CTF{lunar_codebreaker}',   
+        'stackoverflow.com',   
         'CTF{Roman_empire}',   
         'CTF{We_are_venom}'      
     ];
