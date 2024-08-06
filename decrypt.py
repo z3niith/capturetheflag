@@ -4,7 +4,7 @@ def encrypt_flag(flag):
 
 if __name__ == "__main__":
     # The encrypted flag
-    encrypted_flag = "FWI{fdhvdu_vkliw_fkdoohqjh}"
+    encrypted_flag = "Frghlqwkhvfkrro"
     print("Encrypted Flag:", encrypted_flag)
 
     # Decrypt by reversing the shift

@@ -7,7 +7,7 @@ function checkFlag() {
 
     const flags = [
         'CTF{lunar_codebreaker}',   
-        'CTF{caesar_shift_challenge}',   
+        'Codeintheschools',   
         'CTF{file_generated_flag}'      
     ];
 
