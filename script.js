@@ -7,8 +7,8 @@ function checkFlag() {
 
     const flags = [
         'CTF{lunar_codebreaker}',   
-        'CTF{caesar_shift_challenge}',   
-        'CTF{file_generated_flag}'      
+        'CTF{Roman_empire}',   
+        'CTF{We_are_venom}'      
     ];
 
     if (flags.includes(input)) {
