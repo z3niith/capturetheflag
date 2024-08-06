@@ -1,2 +1,3 @@
 # capturetheflag_project
-small project
+1. This should be done completely independent, no help.
+2. 
