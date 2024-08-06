@@ -8,13 +8,13 @@ function checkFlag() {
     const flags = [
         'CTF{lunar_codebreaker}',   
         'Codeintheschools',   
-        'CTF{file_generated_flag}'      
+        'CTF{DarkNetSpecter}'      
     ];
 
     if (flags.includes(input)) {
         result.textContent = 'Congratulations! You found the flag! You should connect with me on linkedin';
         result.style.color = 'green';
-        correctSound.play();
+        correctSound.play("");
     } else {
         result.textContent = 'Incorrect flag, try again!';
         result.style.color = 'red';
