@@ -1,1 +1,24 @@
-(function(_0x569326,_0x1e347f){const _0x172a1a=_0x477a,_0x15143c=_0x569326();while(!![]){try{const _0xe93dd8=-parseInt(_0x172a1a(0x65))/0x1+-parseInt(_0x172a1a(0x66))/0x2+parseInt(_0x172a1a(0x68))/0x3*(parseInt(_0x172a1a(0x7a))/0x4)+parseInt(_0x172a1a(0x71))/0x5*(parseInt(_0x172a1a(0x79))/0x6)+parseInt(_0x172a1a(0x67))/0x7*(-parseInt(_0x172a1a(0x75))/0x8)+-parseInt(_0x172a1a(0x7b))/0x9*(parseInt(_0x172a1a(0x6c))/0xa)+-parseInt(_0x172a1a(0x73))/0xb*(-parseInt(_0x172a1a(0x72))/0xc);if(_0xe93dd8===_0x1e347f)break;else _0x15143c['push'](_0x15143c['shift']());}catch(_0x49b768){_0x15143c['push'](_0x15143c['shift']());}}}(_0x1697,0x7c150));function _0x477a(_0xefbeb8,_0x7ffbe1){const _0x1697c0=_0x1697();return _0x477a=function(_0x477af7,_0x1a30fb){_0x477af7=_0x477af7-0x64;let _0x60d93b=_0x1697c0[_0x477af7];return _0x60d93b;},_0x477a(_0xefbeb8,_0x7ffbe1);}function _0x1697(){const _0x8297cc=['35KIPXrF','84PrMrLA','2913383SVHFfP','CTF{DarkNetSpecter}','5307056tyNWYT','getElementById','CTF{lunar_codebreaker}','textContent','724026jGGtfg','131668PbvyNe','4707RtLGjb','10.0.0.130','color','value','correct-sound','red','includes','928257OmtTKC','1577362wlPgqW','7mNEdjX','45WjYXrX','green','Codeintheschools','flag-input','5810CYbPhu','style','play','wrong-sound','Congratulations!\x20You\x20found\x20the\x20flag!\x20You\x20should\x20connect\x20with\x20me\x20on\x20linkedin'];_0x1697=function(){return _0x8297cc;};return _0x1697();}function checkFlag(){const _0x5338ef=_0x477a,_0x2dde09=document[_0x5338ef(0x76)](_0x5338ef(0x6b))[_0x5338ef(0x7e)],_0x373466=document[_0x5338ef(0x76)]('result'),_0x123946=document[_0x5338ef(0x76)](_0x5338ef(0x7f)),_0x389f2a=document[_0x5338ef(0x76)](_0x5338ef(0x6f)),_0x5becb3=[_0x5338ef(0x77),_0x5338ef(0x6a),_0x5338ef(0x74),_0x5338ef(0x7c)];_0x5becb3[_0x5338ef(0x64)](_0x2dde09)?(_0x373466[_0x5338ef(0x78)]=_0x5338ef(0x70),_0x373466[_0x5338ef(0x6d)][_0x5338ef(0x7d)]=_0x5338ef(0x69),_0x123946[_0x5338ef(0x6e)]('')):(_0x373466[_0x5338ef(0x78)]='Incorrect\x20flag,\x20try\x20again!',_0x373466[_0x5338ef(0x6d)]['color']=_0x5338ef(0x80),_0x389f2a[_0x5338ef(0x6e)]());}
+function checkFlag() {
+    const input = document.getElementById('flag-input').value;
+    const result = document.getElementById('result');
+
+    const correctSound = document.getElementById('correct-sound');
+    const wrongSound = document.getElementById('wrong-sound');
+
+    const flags = [
+        'CTF{lunar_codebreaker}',   
+        'Codeintheschools',   
+        'CTF{DarkNetSpecter}',   
+        '10.0.0.130'
+    ];
+
+    if (flags.includes(input)) {
+        result.textContent = 'Congratulations! You found the flag! You should connect with me on linkedin';
+        result.style.color = 'green';
+        correctSound.play("");
+    } else {
+        result.textContent = 'Incorrect flag, try again!';
+        result.style.color = 'red';
+        wrongSound.play();
+    }
+}
