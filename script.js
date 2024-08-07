@@ -8,7 +8,7 @@ function checkFlag() {
     const flags = [
         'CTF{lunar_codebreaker}',   
         'Codeintheschools',   
-        'CTF{DarkNetSpecter}'   
+        'CTF{DarkNetSpecter}',   
         '10.0.0.130' 
     ];
 
