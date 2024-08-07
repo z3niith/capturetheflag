@@ -13,12 +13,18 @@ function checkFlag() {
     ];
 
     if (flags.includes(input)) {
-        result.textContent = 'Congratulations! You found the flag! You should connect with me on linkedin';
+        result.innerHTML = 'Congratulations! You found the flag! You should <a href="https://www.linkedin.com/in/elenge-germain-5ab8b2319/"><strong>connect with me on LinkedIn</strong></a> <br>Now find the next one';
         result.style.color = 'green';
-        correctSound.play("");
+        correctSound.play();
     } else {
         result.textContent = 'Incorrect flag, try again!';
         result.style.color = 'red';
         wrongSound.play();
     }
+
+    result.style.opacity = 1;
+
+    setTimeout(function() {
+        result.style.opacity = 0;
+    }, 3000);
 }
