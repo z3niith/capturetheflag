@@ -1,1 +1,24 @@
-function _0x38cf(_0x29a769,_0x4606d7){const _0x3fd965=_0x3fd9();return _0x38cf=function(_0x38cf26,_0x21f91a){_0x38cf26=_0x38cf26-0xb7;let _0x362d77=_0x3fd965[_0x38cf26];return _0x362d77;},_0x38cf(_0x29a769,_0x4606d7);}(function(_0x18559e,_0x52bdd7){const _0x2967ed=_0x38cf,_0x46feda=_0x18559e();while(!![]){try{const _0x56d8f4=parseInt(_0x2967ed(0xcb))/0x1+parseInt(_0x2967ed(0xbc))/0x2+-parseInt(_0x2967ed(0xcd))/0x3*(parseInt(_0x2967ed(0xbf))/0x4)+parseInt(_0x2967ed(0xc8))/0x5+parseInt(_0x2967ed(0xc4))/0x6+-parseInt(_0x2967ed(0xcc))/0x7+-parseInt(_0x2967ed(0xc3))/0x8;if(_0x56d8f4===_0x52bdd7)break;else _0x46feda['push'](_0x46feda['shift']());}catch(_0x2dc98a){_0x46feda['push'](_0x46feda['shift']());}}}(_0x3fd9,0x77206));function _0x3fd9(){const _0xbcce2=['textContent','wrong-sound','27870YmqzYF','2921863bcHjwA','1390437SzbgWl','flag-input','CTF{DarkNetSpecter}','play','red','Congratulations!\x20You\x20found\x20the\x20flag!\x20You\x20should\x20connect\x20with\x20me\x20on\x20linkedin','942820UeRtAP','color','value','4YpoQgT','getElementById','correct-sound','style','1500600MjBJoW','5037150YFwMiu','Codeintheschools','CTF{lunar_codebreaker}','green','1088000GdsIqD'];_0x3fd9=function(){return _0xbcce2;};return _0x3fd9();}function checkFlag(){const _0x13c492=_0x38cf,_0x22349d=document[_0x13c492(0xc0)](_0x13c492(0xb7))[_0x13c492(0xbe)],_0xf9082c=document[_0x13c492(0xc0)]('result'),_0x543f57=document[_0x13c492(0xc0)](_0x13c492(0xc1)),_0x340b46=document[_0x13c492(0xc0)](_0x13c492(0xca)),_0xab3166=[_0x13c492(0xc6),_0x13c492(0xc5),_0x13c492(0xb8),'10.0.0.130'];_0xab3166['includes'](_0x22349d)?(_0xf9082c[_0x13c492(0xc9)]=_0x13c492(0xbb),_0xf9082c['style'][_0x13c492(0xbd)]=_0x13c492(0xc7),_0x543f57['play']('')):(_0xf9082c[_0x13c492(0xc9)]='Incorrect\x20flag,\x20try\x20again!',_0xf9082c[_0x13c492(0xc2)][_0x13c492(0xbd)]=_0x13c492(0xba),_0x340b46[_0x13c492(0xb9)]());}
+function checkFlag() {
+    const input = document.getElementById('flag-input').value;
+    const result = document.getElementById('result');
+
+    const correctSound = document.getElementById('correct-sound');
+    const wrongSound = document.getElementById('wrong-sound');
+
+    const flags = [
+        'CTF{lunar_codebreaker}',   
+        'Codeintheschools',   
+        'CTF{DarkNetSpecter}',   
+        '10.0.0.130' 
+    ];
+
+    if (flags.includes(input)) {
+        result.textContent = 'Congratulations! You found the flag! You should connect with me on linkedin';
+        result.style.color = 'green';
+        correctSound.play("");
+    } else {
+        result.textContent = 'Incorrect flag, try again!';
+        result.style.color = 'red';
+        wrongSound.play();
+    }
+}
