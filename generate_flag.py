@@ -8,7 +8,7 @@ def generate_flag_file():
     with open("link.txt", "w") as f:
         f.write(flag)
 
-    print("Flag file link generated: link.txt")
+    print("File for the flag has been generated: link.txt")
 
 if __name__ == "__main__":
     generate_flag_file()
