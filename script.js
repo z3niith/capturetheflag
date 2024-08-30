@@ -1,1 +1,20 @@
-(function(_0x2675fe,_0x15dbe3){const _0x2e9970=_0x8118,_0x11d911=_0x2675fe();while(!![]){try{const _0x18079e=parseInt(_0x2e9970(0xc5))/0x1+parseInt(_0x2e9970(0xda))/0x2*(-parseInt(_0x2e9970(0xdb))/0x3)+-parseInt(_0x2e9970(0xc7))/0x4*(parseInt(_0x2e9970(0xc4))/0x5)+-parseInt(_0x2e9970(0xd7))/0x6*(parseInt(_0x2e9970(0xd2))/0x7)+-parseInt(_0x2e9970(0xc2))/0x8+parseInt(_0x2e9970(0xce))/0x9+-parseInt(_0x2e9970(0xcd))/0xa*(-parseInt(_0x2e9970(0xc6))/0xb);if(_0x18079e===_0x15dbe3)break;else _0x11d911['push'](_0x11d911['shift']());}catch(_0xcd9a33){_0x11d911['push'](_0x11d911['shift']());}}}(_0x4f52,0x66cc6));function _0x4f52(){const _0x1a316a=['Congratulations!\x20You\x20found\x20the\x20flag!\x20You\x20should\x20<a\x20href=\x22https://www.linkedin.com/in/elenge-germain-5ab8b2319/\x22><strong>connect\x20with\x20me\x20on\x20LinkedIn</strong></a>\x20<br>Now\x20find\x20the\x20next\x20one','2034HszIWI','red','Codeintheschools','74NMoFIS','807XKWQDS','color','CTF{DarkNetSpecter}','style','10.0.0.130','3948328QdVXXn','play','2941940XsSRZY','66967KhKeuo','975876xYhoDp','4FHaXgy','CTF{lunar_codebreaker}','wrong-sound','green','value','Incorrect\x20flag,\x20try\x20again!','190rxlyWj','3301596eVZcgK','result','correct-sound','getElementById','12523zufuJL','includes','flag-input','opacity'];_0x4f52=function(){return _0x1a316a;};return _0x4f52();}function _0x8118(_0x3f53b3,_0x152e3a){const _0x4f52eb=_0x4f52();return _0x8118=function(_0x8118a3,_0xbbfd3b){_0x8118a3=_0x8118a3-0xc0;let _0xd9ad6f=_0x4f52eb[_0x8118a3];return _0xd9ad6f;},_0x8118(_0x3f53b3,_0x152e3a);}function checkFlag(){const _0x5852df=_0x8118,_0x153ed3=document[_0x5852df(0xd1)](_0x5852df(0xd4))[_0x5852df(0xcb)],_0x5104a2=document['getElementById'](_0x5852df(0xcf)),_0x3b12e1=document['getElementById'](_0x5852df(0xd0)),_0x584df3=document[_0x5852df(0xd1)](_0x5852df(0xc9)),_0x4f23f5=[_0x5852df(0xc8),_0x5852df(0xd9),_0x5852df(0xdd),_0x5852df(0xc1)];_0x4f23f5[_0x5852df(0xd3)](_0x153ed3)?(_0x5104a2['innerHTML']=_0x5852df(0xd6),_0x5104a2[_0x5852df(0xc0)]['color']=_0x5852df(0xca),_0x3b12e1[_0x5852df(0xc3)]()):(_0x5104a2['textContent']=_0x5852df(0xcc),_0x5104a2[_0x5852df(0xc0)][_0x5852df(0xdc)]=_0x5852df(0xd8),_0x584df3['play']()),_0x5104a2['style'][_0x5852df(0xd5)]=0x1,setTimeout(function(){const _0x28f50b=_0x5852df;_0x5104a2[_0x28f50b(0xc0)][_0x28f50b(0xd5)]=0x0;},0xbb8);}
+function checkFlag() {
+    const _0x153ed3 = document.getElementById("flag-input").value;
+    const _0x5104a2 = document.getElementById("result");
+    const _0x3b12e1 = document.getElementById("correct-sound");
+    const _0x584df3 = document.getElementById("wrong-sound");
+    const _0x4f23f5 = ["CTF{lunar_codebreaker}", "Codeintheschools", "CTF{DarkNetSpecter}", "10.0.0.130", "Never gonna say goodbye"];
+    if (_0x4f23f5.includes(_0x153ed3)) {
+      _0x5104a2.innerHTML = "Congratulations! You found the flag! You should <a href=\"https://www.linkedin.com/in/elenge-germain-5ab8b2319/\"><strong>connect with me on LinkedIn</strong></a> <br>Now find the next one";
+      _0x5104a2.style.color = "green";
+      _0x3b12e1.play();
+    } else {
+      _0x5104a2.textContent = "Incorrect flag, try again!";
+      _0x5104a2.style.color = "red";
+      _0x584df3.play();
+    }
+    _0x5104a2.style.opacity = 0x1;
+    setTimeout(function () {
+      _0x5104a2.style.opacity = 0x0;
+    }, 0xbb8);
+  }
