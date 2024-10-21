@@ -12,12 +12,12 @@ body {
     background-color: #1c1e22;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(155, 147, 147, 0.5);
 }
 
 button {
     padding: 10px 20px;
-    background-color: #61dafb;
+    background-color: #6e99a555;
     border: none;
     border-radius: 5px;
     cursor: pointer;
