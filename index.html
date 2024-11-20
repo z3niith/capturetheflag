@@ -10,35 +10,32 @@
 <body>
     <div class="container">
         <h1><span class="auto-type"></span></h1>
+        <h3>This is more of a fun challenge rather than an all out CTF</h3>
         <h3>This should be done completely independent. <br><strong>ZERO HELP!!!</strong></h3>
+        <p>All you need is some basic knowledge on Python and web navigation for this activity.</p>
+        <a href="https://www.linkedin.com/in/elenge-germain-5ab8b2319/"><b>Connect with me on LinkedIn</b></a>
         <p>Your first task is to inspect the page source to find the hidden flag.</p>
         
-        <h2>1. In Plain Sight (somewhere here)</h2>
-        <p class="difficulty-super-easy"><b>Beginner</b></p>
-        <p>Explore the page and find the flag hidden in the code.</p>
+        <h2>1. Somewhere On This Page</h2>
+        <p>Explore the page and see if you can find the flag hidden in the HTML.</p>
 
         <h2>2. Cryptic</h2>
-        <p class="difficulty-easy"><b>Easy</b></p>
         <p>Decrypt the flag hidden in this <a href="decrypt.py" download>Python script</a>.</p>
 
         <h2>3. File Manipulation</h2>
-        <p class="difficulty-intermediate"><b>Intermediate</b></p>
         <p>Run the <a href="generate_flag.py" download>Python script</a> to generate a file with the hidden flag.</p>
 
         <h2>4. Tracing Footsteps</h2>
-        <p class="difficulty-advanced"><b>Advanced</b></p>
         <p>Download the PCAP file and analyze the network's traffic <a href="challenge4.zip" download>here</a>.</p>
         
         <h2>5. Never Give Up</h2>
-        <p class="difficulty-easy"><b>Easy</b></p>
         <p>Download the following file<a href="sirrobot.png" download> here</a> and decrypt the hidden Flag.</p>
         <p>What's he never going to say? <br>hint: 1:36</p>
         
         <h2>6. Decrypt Part 2: Finale</h2>
-        <p class="difficulty-intermediate"><b>Intermediate</b></p>
         <p>Decrypt this <a href="decrypt_2.py" download>Python script</a>.</p>
         
-        <h3>Found the flag?<br> Submit Your Flag:</h3>
+        <h3>Submit Your Flag:</h3>
         <input type="text" id="flag-input" placeholder="Enter flag here">
         <button onclick="checkFlag()">Submit</button>
         <p id="result"></p>
@@ -53,33 +50,11 @@
             backSpeed: 150,
             loop: true
         });
-
-        function checkFlag() {
-            const flag = document.getElementById("flag-input").value;
-            const resultElement = document.getElementById('result');
-
-            // Send the flag to the server using Fetch API
-            fetch('http://localhost:3000/submit_flag', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ flag: flag })
-            })
-            .then(response => response.json())
-            .then(data => {
-                resultElement.textContent = data.message;
-                if (response.status === 200) {
-                    resultElement.style.color = 'violet';  // Success color
-                } else {
-                    resultElement.style.color = 'red';     // Error color
-                }
-            })
-            .catch(error => {
-                resultElement.textContent = "An error occurred. Please try again.";
-                resultElement.style.color = 'red';
-            });
-        }
-    </script>
+    
+    </script>   
+    <audio id="correct-sound" src="correct.mp3"></audio>
+    <audio id="wrong-sound" src="wrong.mp3"></audio>
+    <script src="script.js"></script>
+        <!-- Flag for Challenge 1: CTF{lunar_codebreaker} -->
 </body>
 </html>
