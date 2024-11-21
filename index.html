@@ -5,56 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTF Challenge</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="earth.png">
+    <link rel="icon" type="image/x-icon" href="logo.png">
 </head>
 <body>
     <div class="container">
         <h1><span class="auto-type"></span></h1>
-        <h3>This is more of a fun challenge rather than an all out CTF</h3>
-        <h3>This should be done completely independent. <br><strong>ZERO HELP!!!</strong></h3>
-        <p>All you need is some basic knowledge on Python and web navigation for this activity.</p>
-        <a href="https://www.linkedin.com/in/elenge-germain-5ab8b2319/"><b>Connect with me on LinkedIn</b></a>
-        <p>Your first task is to inspect the page source to find the hidden flag.</p>
-        
-        <h2>1. Somewhere On This Page</h2>
-        <p>Explore the page and see if you can find the flag hidden in the HTML.</p>
+        <p class="subtitle">This is more of a fun challenge than an all-out CTF.</p>
+        <p class="warning">This should be done completely independently. <strong>ZERO HELP!</strong></p>
+        <p class="info">All you need is some basic knowledge of Python and web navigation for this activity.</p>
+        <a href="https://www.linkedin.com/in/elenge-germain-5ab8b2319/" class="btn-link"><strong>Connect with me on LinkedIn</strong></a>
 
-        <h2>2. Cryptic</h2>
-        <p>Decrypt the flag hidden in this <a href="decrypt.py" download>Python script</a>.</p>
+        <div class="challenge-list">
+            <h2>Challenges</h2>
+            <ol>
+                <li><strong>Somewhere On This Page:</strong> Find the flag hidden in the HTML.</li>
+                <li><strong>Cryptic:</strong> Decrypt the flag hidden in this <a href="decrypt.py" download>Python script</a>.</li>
+                <li><strong>File Manipulation:</strong> Run the <a href="generate_flag.py" download>Python script</a> to generate the flag.</li>
+                <li><strong>Tracing Footsteps:</strong> Analyze the network's traffic from the <a href="challenge4.zip" download>PCAP file</a>.</li>
+                <li><strong>Never Give Up:</strong> Decrypt the flag hidden in <a href="sirrobot.png" download>this file</a>. Hint: 1:36.</li>
+                <li><strong>Decrypt Part 2:</strong> Solve the <a href="decrypt_2.py" download>final script</a>.</li>
+            </ol>
+        </div>
+<!--CTF{lunar_codebreaker}-->
 
-        <h2>3. File Manipulation</h2>
-        <p>Run the <a href="generate_flag.py" download>Python script</a> to generate a file with the hidden flag.</p>
+        <div id="score-container" style="font-size: 1.5rem; color: #f4f4f9; margin-bottom: 20px;">
+            <p id="score" class="scoring">Score: 0</p>
+        </div>
 
-        <h2>4. Tracing Footsteps</h2>
-        <p>Download the PCAP file and analyze the network's traffic <a href="challenge4.zip" download>here</a>.</p>
-        
-        <h2>5. Never Give Up</h2>
-        <p>Download the following file<a href="sirrobot.png" download> here</a> and decrypt the hidden Flag.</p>
-        <p>What's he never going to say? <br>hint: 1:36</p>
-        
-        <h2>6. Decrypt Part 2: Finale</h2>
-        <p>Decrypt this <a href="decrypt_2.py" download>Python script</a>.</p>
-        
-        <h3>Submit Your Flag:</h3>
-        <input type="text" id="flag-input" placeholder="Enter flag here">
-        <button onclick="checkFlag()">Submit</button>
-        <p id="result"></p>
+        <div class="flag-section">
+            <h3>Submit Your Flag</h3>
+            <input type="text" id="flag-input" placeholder="Enter flag here">
+            <button onclick="checkFlag()">Submit</button>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <div class="info-container">
+        <h3>More Info</h3>
+        <p><strong>This is a mini project meant to be used for <mark>passion project</mark> and <br><mark>IB CAS Project</mark></strong></p>
+        <li>An <mark><strong>increase of 10 points</strong></mark> for each correct answer</li>
+        <li>A <mark><strong>deduction of 5 points</strong></mark> for each incorrect answer</li>
     </div>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-      
     <script>
-        var typed = new Typed(".auto-type", {
-            strings: ["Hi", "print('hello world')", "Hello", "Konichiwa", "Bonjour","Hola"],
-            typeSpeed: 155,
-            backSpeed: 150,
+        new Typed(".auto-type", {
+            strings: ["Welcome", "print('Hello, world!')", "Hello!", "Konichiwa!", "Bonjour!", "Hola!"],
+            typeSpeed: 100,
+            backSpeed: 80,
             loop: true
         });
-    
-    </script>   
+    </script>
     <audio id="correct-sound" src="correct.mp3"></audio>
     <audio id="wrong-sound" src="wrong.mp3"></audio>
     <script src="script.js"></script>
-        <!-- Flag for Challenge 1: CTF{lunar_codebreaker} -->
 </body>
 </html>

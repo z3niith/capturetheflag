@@ -1,1 +1,52 @@
-(function(_0x29a1af,_0x2a6a56){const _0x3bf2a5=_0x23e3,_0x438a13=_0x29a1af();while(!![]){try{const _0x354283=-parseInt(_0x3bf2a5(0x8d))/0x1*(parseInt(_0x3bf2a5(0x83))/0x2)+-parseInt(_0x3bf2a5(0x86))/0x3*(parseInt(_0x3bf2a5(0x85))/0x4)+parseInt(_0x3bf2a5(0x7c))/0x5*(parseInt(_0x3bf2a5(0x75))/0x6)+parseInt(_0x3bf2a5(0x8a))/0x7*(parseInt(_0x3bf2a5(0x77))/0x8)+parseInt(_0x3bf2a5(0x7d))/0x9+-parseInt(_0x3bf2a5(0x82))/0xa+parseInt(_0x3bf2a5(0x8e))/0xb*(parseInt(_0x3bf2a5(0x7b))/0xc);if(_0x354283===_0x2a6a56)break;else _0x438a13['push'](_0x438a13['shift']());}catch(_0x1bec32){_0x438a13['push'](_0x438a13['shift']());}}}(_0x1c2e,0xcccf0));function _0x23e3(_0x1a8bb1,_0x38d221){const _0x1c2e9a=_0x1c2e();return _0x23e3=function(_0x23e39c,_0x31ffd7){_0x23e39c=_0x23e39c-0x73;let _0x109c82=_0x1c2e9a[_0x23e39c];return _0x109c82;},_0x23e3(_0x1a8bb1,_0x38d221);}function _0x1c2e(){const _0x4c30f3=['innerHTML','Never\x20gonna\x20say\x20goodbye','89RBojrm','715uQPHcb','includes','style','That\x27s\x20the\x20incorrect\x20flag,\x20try\x20again!','getElementById','8010978eqXmjs','opacity','1704rBZrQp','color','flag-input','CTF{lunar_codebreaker}','281940RNZQmB','5EXyJMA','9121725ZQIYKZ','wrong-sound','Codeintheschools','10.0.0.130','violet','13728180MoiPOB','27670pmFBKJ','red','4949340voPMiH','3vKiRwn','Congratulations!\x20You\x20found\x20the\x20flag!\x20You\x20should\x20<a\x20href=\x22https://www.linkedin.com/in/elenge-germain-5ab8b2319/\x22><strong>connect\x20with\x20me\x20on\x20LinkedIn</strong></a>\x20<br>Now\x20find\x20the\x20next\x20one','play','textContent','26439CjnNdE'];_0x1c2e=function(){return _0x4c30f3;};return _0x1c2e();}function checkFlag(){const _0xdcc417=_0x23e3,_0x30f104=document[_0xdcc417(0x74)](_0xdcc417(0x79))['value'],_0x1e43ef=document[_0xdcc417(0x74)]('result'),_0x4d0184=document[_0xdcc417(0x74)]('correct-sound'),_0xf85a2f=document['getElementById'](_0xdcc417(0x7e)),_0x3697d6=[_0xdcc417(0x7a),_0xdcc417(0x7f),'CTF{DarkNetSpecter}',_0xdcc417(0x80),_0xdcc417(0x8c),'Last_one'];_0x3697d6[_0xdcc417(0x8f)](_0x30f104)?(_0x1e43ef[_0xdcc417(0x8b)]=_0xdcc417(0x87),_0x1e43ef[_0xdcc417(0x90)][_0xdcc417(0x78)]=_0xdcc417(0x81),_0x4d0184[_0xdcc417(0x88)]()):(_0x1e43ef[_0xdcc417(0x89)]=_0xdcc417(0x73),_0x1e43ef[_0xdcc417(0x90)][_0xdcc417(0x78)]=_0xdcc417(0x84),_0xf85a2f['play']()),_0x1e43ef['style'][_0xdcc417(0x76)]=0x1,setTimeout(function(){const _0x2a4707=_0xdcc417;_0x1e43ef[_0x2a4707(0x90)][_0x2a4707(0x76)]=0x0;},0xbb8);}
+let score = 0;
+
+function updateScore() {
+    const scoreDisplay = document.getElementById("score");
+    scoreDisplay.textContent = `Score: ${score}`;
+}
+
+function checkFlag() {
+    const flagInput = document.getElementById("flag-input").value;
+    const resultDisplay = document.getElementById("result");
+    const correctSound = document.getElementById("correct-sound");
+    const wrongSound = document.getElementById("wrong-sound");
+    const validFlags = [
+        "CTF{lunar_codebreaker}",
+        "Codeintheschools",
+        "CTF{DarkNetSpecter}",
+        "10.0.0.130",
+        "Never gonna say goodbye",
+        "Last_one",
+    ];
+    const container = document.querySelector(".container");
+
+    if (validFlags.includes(flagInput)) {
+        resultDisplay.innerHTML = 
+            'Correct flag!<a href="https://www.linkedin.com/in/elenge-germain-5ab8b2319/" target="_blank"><br><strong> connect with me</strong></a>';
+        resultDisplay.style.color = "violet";
+        correctSound.play();
+
+        score += 10;
+    } else {
+        resultDisplay.textContent = "That's the incorrect flag, try again!";
+        resultDisplay.style.color = "red";
+        wrongSound.play();
+
+        score -= 5;
+    }
+
+    updateScore();
+
+    resultDisplay.style.opacity = 1;
+    container.classList.add("grow");
+
+    setTimeout(() => {
+        resultDisplay.style.opacity = 0;
+        container.classList.remove("grow");
+        container.classList.add("shrink");
+
+        setTimeout(() => {
+            container.classList.remove("shrink");
+        }, 300);
+    }, 2000);
+}
