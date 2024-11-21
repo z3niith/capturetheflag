@@ -1,20 +1,16 @@
-// Import required modules
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-require("dotenv").config(); // Load environment variables from .env file
+require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
 app.use(cors());
 app.use(bodyParser.json());
 
-// Valid flags (store securely)
 const VALID_FLAGS = process.env.FLAGS ? process.env.FLAGS.split(",") : [];
 
-// Route to validate flags
 app.post("/validate-flag", (req, res) => {
     const { flag } = req.body;
 
@@ -25,7 +21,6 @@ app.post("/validate-flag", (req, res) => {
     }
 });
 
-// Start the server
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

@@ -1,3 +1,10 @@
+let score = 0;
+
+function updateScore() {
+    const scoreDisplay = document.getElementById("score");
+    scoreDisplay.textContent = `Score: ${score}`;
+}
+
 async function checkFlag() {
     const flagInput = document.getElementById("flag-input").value;
     const resultDisplay = document.getElementById("result");
@@ -6,7 +13,6 @@ async function checkFlag() {
     const container = document.querySelector(".container");
 
     try {
-        // Send the flag to the backend
         const response = await fetch("https://capturetheflag-nf0x.onrender.com/validate-flag", {
             method: "POST",
             headers: {
@@ -17,8 +23,8 @@ async function checkFlag() {
 
         const data = await response.json();
 
+        console.log(data);
         if (response.ok) {
-            // Correct flag
             resultDisplay.innerHTML = 
                 'Correct flag!<a href="https://www.linkedin.com/in/elenge-germain-5ab8b2319/" target="_blank"><br><strong> connect with me</strong></a>';
             resultDisplay.style.color = "violet";
@@ -26,7 +32,6 @@ async function checkFlag() {
 
             score += 10;
         } else {
-            // Incorrect flag
             resultDisplay.textContent = "That's the incorrect flag, try again!";
             resultDisplay.style.color = "red";
             wrongSound.play();
