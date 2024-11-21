@@ -4,13 +4,23 @@ function updateScore() {
     const scoreDisplay = document.getElementById("score");
     scoreDisplay.textContent = `Score: ${score}`;
 }
-
 async function checkFlag() {
     const flagInput = document.getElementById("flag-input").value;
     const resultDisplay = document.getElementById("result");
     const correctSound = document.getElementById("correct-sound");
     const wrongSound = document.getElementById("wrong-sound");
+    const duplicateSound = document.getElementById("duplicate-sound")
     const container = document.querySelector(".container");
+
+    let submittedFlags = JSON.parse(localStorage.getItem('submittedFlags')) || [];
+
+    if (submittedFlags.includes(flagInput)) {
+        resultDisplay.textContent = "You have already submitted this flag!";
+        resultDisplay.style.color = "orange";
+        resultDisplay.style.opacity = 1;
+        duplicateSound.play();
+        return; 
+    }
 
     try {
         const response = await fetch("https://capturetheflag-nf0x.onrender.com/validate-flag", {
@@ -24,6 +34,7 @@ async function checkFlag() {
         const data = await response.json();
 
         console.log(data);
+
         if (response.ok) {
             resultDisplay.innerHTML = 
                 'Correct flag!<a href="https://www.linkedin.com/in/elenge-germain-5ab8b2319/" target="_blank"><br><strong> connect with me</strong></a>';
@@ -31,6 +42,9 @@ async function checkFlag() {
             correctSound.play();
 
             score += 10;
+
+            submittedFlags.push(flagInput);
+            localStorage.setItem('submittedFlags', JSON.stringify(submittedFlags));
         } else {
             resultDisplay.textContent = "That's the incorrect flag, try again!";
             resultDisplay.style.color = "red";
