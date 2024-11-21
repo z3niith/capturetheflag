@@ -64,7 +64,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-License for the icon provided by <a href="generate_flag.py" download> flaticon</a>  <
+License for the icon provided by <a href="license.pdf" download> flaticon</a>  <
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
