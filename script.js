@@ -3,7 +3,10 @@ let score = 0;
 function updateScore() {
     const scoreDisplay = document.getElementById("score");
     scoreDisplay.textContent = `Score: ${score}`;
+
 }
+
+localStorage()
 async function checkFlag() {
     const flagInput = document.getElementById("flag-input").value;
     const resultDisplay = document.getElementById("result");
