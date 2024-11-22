@@ -61,19 +61,17 @@ License for the icon provided by <a href="license.pdf" download> flaticon</a>
 
 [![Product Name Screen Shot][product-screenshot]](https://z3niith.github.io/capturetheflag/)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## How to play
 
-Information regarding how you can play can be found of the site!
+Information regarding how you can play can be found on the site!
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-I by no means create this with the intention of it ever being used in a real world Cyber tournament, it more of a fun project. I created this with the intention of helping me grow my skills.
+I by no means created this with the intention of it ever being used in a real world Cyber tournament, its more of a fun project. I created this with the intention of helping me grow my skills and using it for my IB Diploma CAS Project and for college passion project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,8 +89,7 @@ I got this readme template from vi-dev0 and I **truly appreciate it**.
 <!-- LICENSE -->
 ## License
 
-License for the icon (edit by me but provided by the site) can be found in the 'license.pdf.'
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+License for the icon (edits made by me but provided by the site) can be found in 'license.pdf.'
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,7 +98,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Z3nith - [@Nananocturnalvm.bsky.social](https://bsky.app/profile/nocturnalvm.bsky.social)
+Z3nith - [@Nananocturnalvm.bsky.social](https://bsky.app/profile/nocturnalvm.bsky.social) <br>
 LinkedIn - [LinkedIn Profile](https://www.linkedin.com/in/elenge-germain-5ab8b2319/)
 
 Project Link: [https://github.com/z3niith/capturetheflag](https://github.com/z3niith/capturetheflag)
