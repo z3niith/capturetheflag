@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTF Challenge</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="hacker (1).png">
+    <link rel="icon" type="image/x-icon" href="images/hacker (1).png">
 </head>
 <body>
     <div class="container">
@@ -19,11 +19,11 @@
             <h2>Challenges</h2>
             <ol>
                 <li><strong>Somewhere On This Page:</strong> Find the flag hidden in the HTML.</li>
-                <li><strong>Cryptic:</strong> Decrypt the flag hidden in this <a href="decrypt.py" download>Python script</a>.</li>
-                <li><strong>File Manipulation:</strong> Run the <a href="generate_flag.py" download>Python script</a> to generate the flag.</li>
-                <li><strong>Tracing Footsteps:</strong> Analyze the network's traffic from the <a href="challenge4.zip" download>PCAP file</a>.</li>
-                <li><strong>Never Give Up:</strong> Decrypt the flag hidden in <a href="sirrobot.png" download>this file</a>. Hint: 1:36.</li>
-                <li><strong>Decrypt Part 2:</strong> Solve the <a href="decrypt_2.py" download>final script</a>.</li>
+                <li><strong>Cryptic:</strong> Decrypt the flag hidden in this <a href="challenges/decrypt.py" download>Python script</a>.</li>
+                <li><strong>File Manipulation:</strong> Run the <a href="challenges/generate_flag.py" download>Python script</a> to generate the flag.</li>
+                <li><strong>Tracing Footsteps:</strong> Analyze the network's traffic from the <a href="challenges/challenge4.zip" download>PCAP file</a>.</li>
+                <li><strong>Never Give Up:</strong> Decrypt the flag hidden in <a href="challenges/sirrobot.png" download>this file</a>. Hint: 1:36.</li>
+                <li><strong>Decrypt Part 2:</strong> Solve for the <a href="challenges/decrypt_2.py" download>final flag</a>.</li>
             </ol>
         </div>
 <!--CTF{lunar_codebreaker}-->
@@ -56,9 +56,11 @@
             loop: true
         });
     </script>
-    <audio id="correct-sound" src="correct_sound.mp3"></audio>
-    <audio id="wrong-sound" src="wrong_sound.mp3"></audio>
-    <audio id="duplicate-sound" src="error_sound.wav"></audio>
+    <audio id="correct-sound" src="sounds/correct_sound.mp3"></audio>
+    <audio id="wrong-sound" src="sounds/wrong_sound.mp3"></audio>
+    <audio id="duplicate-sound" src="sounds/error_sound.wav"></audio>
     <script src="script.js"></script>
+    <!--Need to make it to where the score saves via server-->
 </body>
 </html>
+
