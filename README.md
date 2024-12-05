@@ -82,6 +82,8 @@ I by no means created this with the intention of it ever being used in a real wo
 
 I got this readme template from vi-dev0 and I **truly appreciate it**.
 
+Made in collaboration with my CAS Project partner.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
