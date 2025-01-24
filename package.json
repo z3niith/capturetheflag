@@ -1,7 +1,7 @@
 {
     "name": "capturetheflag",
     "version": "1.0.0",
-    "description": "Backend for Capture The Flag game",
+    "description": "Backend for Capture The Flag",
     "main": "app.js",
     "scripts": {
         "start": "node app.js"
