@@ -12,7 +12,7 @@ async function checkFlag() {
     const resultDisplay = document.getElementById("result");
     const correctSound = document.getElementById("correct-sound");
     const wrongSound = document.getElementById("wrong-sound");
-    const duplicateSound = document.getElementById("duplicate-sound")
+//  const duplicateSound = document.getElementById("####");     // no sound for duplicated flag, need to create and add it.
     const container = document.querySelector(".container");
 
     let submittedFlags = JSON.parse(localStorage.getItem('submittedFlags')) || [];
@@ -26,7 +26,7 @@ async function checkFlag() {
     }
 
     try {
-        const response = await fetch("https://capturetheflag-nf0x.onrender.com/validate-flag", {
+        const response = await fetch("https://capturetheflag-nf0x.onrender.com/validate-flag", {     // server connection, lol
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
