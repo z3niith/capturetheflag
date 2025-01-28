@@ -18,7 +18,7 @@ async function checkFlag() {
     let submittedFlags = JSON.parse(localStorage.getItem('submittedFlags')) || [];
 
     if (submittedFlags.includes(flagInput)) {
-        resultDisplay.textContent = "You have already submitted this flag!";
+        resultDisplay.textContent = "Flag already submitted";
         resultDisplay.style.color = "orange";
         resultDisplay.style.opacity = 1;
         duplicateSound.play();
