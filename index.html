@@ -28,14 +28,14 @@
         </div>
 <!--CTF{lunar_codebreaker}-->
 
-        <div id="score-container" style="font-size: 1.5rem; color: #f4f4f9; margin-bottom: 20px;">
+        <div id="score-container">
             <p id="score" class="scoring">Score: 0</p>
         </div>
 
         <div class="flag-section">
             <h3>Submit Your Flag</h3>
             <input type="text" id="flag-input" placeholder="Enter flag here">
-            <button onclick="checkFlag()">Submit</button>
+            <button id="submit-button">Submit</button>
             <p id="result"></p>
         </div>
     </div>
@@ -59,8 +59,11 @@
     <audio id="correct-sound" src="sounds/correct_sound.mp3"></audio>
     <audio id="wrong-sound" src="sounds/wrong_sound.mp3"></audio>
     <audio id="duplicate-sound" src="sounds/error_sound.wav"></audio>
+    <audio id="win-sound" src="sounds/duplicate.mp3"></audio>
     <script src="script.js"></script>
+    <script>
+        document.getElementById('submit-button').addEventListener('click', checkFlag);
+    </script>
     <!--Need to make it to where the score saves via server-->
 </body>
 </html>
-
