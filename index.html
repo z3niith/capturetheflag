@@ -5,26 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTF</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="images/hacker (1).png">
+    <link rel="icon" type="image/x-icon" href="images/page_icon.png">
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <h1><span class="auto-type"></span></h1>
-        <p class="subtitle">This is more of a fun challenge than an all-out CTF.</p>
-        <p class="warning">This should be done completely independently. <strong>ZERO HELP!</strong></p>
+        <p class="subtitle">This is a fun miniature project.</p>
+        <p class="warning">Should be done completely independently. <strong>ZERO HELP!</strong></p>
         <p class="info">All you need is some basic knowledge of Python and web navigation for this activity.</p>
         <a href="https://www.linkedin.com/in/elenge-germain-5ab8b2319/" class="btn-link"><strong>Connect with me on LinkedIn</strong></a>
-
         <div class="challenge-list">
             <h2>Challenges</h2>
-            <ol>
-                <li><strong>Somewhere On This Page:</strong> Find the flag hidden in the HTML.</li>
-                <li><strong>Cryptic:</strong> Decrypt the flag hidden in this <a href="challenges/decrypt.py" download>Python script</a>.</li>
-                <li><strong>File Manipulation:</strong> Run the <a href="challenges/generate_flag.py" download>Python script</a> to generate the flag.</li>
-                <li><strong>Tracing Footsteps:</strong> Analyze the network's traffic from the <a href="challenges/challenge4.zip" download>PCAP file</a>.</li>
-                <li><strong>Never Give Up:</strong> Decrypt the flag hidden in <a href="challenges/sirrobot.png" download>this file</a>. Hint: 1:36.</li>
-                <li><strong>Decrypt Part 2:</strong> Solve for the <a href="challenges/decrypt_2.py" download>final flag</a>.</li>
-            </ol>
+            <section>
+                <li>
+                    <strong>Hidden Flag:</strong>
+                    Find the flag hidden somewhere in this page's HTML source.
+                </li>
+                <li>
+                    <strong>Cryptic Code:</strong>
+                    Decrypt the flag using this
+                    <a href="challenges/decrypt.py" download>Python script</a>.
+                </li>
+                <li>
+                    <strong>File Manipulation:</strong>
+                    Run the
+                    <a href="challenges/generate_flag.py" download>Python script</a>
+                    to generate a flag.
+                </li>
+                <li>
+                    <strong>Network Sleuth:</strong>
+                    Analyze the network traffic in this
+                    <a href="challenges/challenge4.zip" download>PCAP file</a>
+                    to find the flag.
+                </li>
+                <li>
+                    <strong>Steganography:</strong>
+                    Decrypt the flag hidden in
+                    <a href="challenges/sirrobot.png" download>this image</a>.
+                    <span class="hint">Hint: Check around 1:36.</span>
+                </li>
+                <li>
+                    <strong>Final Challenge:</strong>
+                    Solve for the final flag using
+                    <a href="challenges/decrypt_2.py" download>this Python script</a>.
+                </li>
+            </section>
         </div>
 <!--CTF{lunar_codebreaker}-->
 
@@ -38,14 +63,16 @@
             <button id="submit-button">Submit</button>
             <p id="result"></p>
         </div>
-    </div>
+    </main>
 
-    <div class="info-container">
+    <aside class="info-container">
         <h3>More Info</h3>
-        <p><strong>This is a mini project meant to be used for <mark>passion project</mark> and <br><mark>IB CAS Project</mark></strong></p>
-        <li>An <mark><strong>increase of 10 points</strong></mark> for each correct answer</li>
-        <li>A <mark><strong>deduction of 5 points</strong></mark> for each incorrect answer</li>
-    </div>
+        <p><strong>This is a mini project meant to be used for a <mark>passion project</mark> and <br>an <mark>IB CAS Project</mark></strong></p>
+        <ul>
+            <li>An <mark><strong>increase of 10 points</strong></mark> for each correct answer</li>
+            <li>A <mark><strong>deduction of 5 points</strong></mark> for each incorrect answer</li>
+        </ul>
+    </aside>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
@@ -61,9 +88,6 @@
     <audio id="duplicate-sound" src="sounds/error_sound.wav"></audio>
     <audio id="win-sound" src="sounds/duplicate.mp3"></audio>
     <script src="script.js"></script>
-    <script>
-        document.getElementById('submit-button').addEventListener('click', checkFlag);
-    </script>
     <!--Need to make it to where the score saves via server-->
 </body>
 </html>

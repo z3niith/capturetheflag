@@ -1,12 +1,22 @@
 let score = 0;
+let submittedFlags = [];
+const API_URL = "https://capturetheflag-nf0x.onrender.com/validate-flag";
+
+document.addEventListener('DOMContentLoaded', initialize);
+
+function initialize() {
+    score = parseInt(localStorage.getItem('ctfScore')) || 0;
+    submittedFlags = JSON.parse(localStorage.getItem('submittedFlags')) || [];
+    document.getElementById('submit-button').addEventListener('click', checkFlag);
+    updateScore();
+}
 
 function updateScore() {
     const scoreDisplay = document.getElementById("score");
     scoreDisplay.textContent = `Score: ${score}`;
-
+    localStorage.setItem('ctfScore', score);
 }
 
-localStorage()
 async function checkFlag() {
     const flagInput = document.getElementById("flag-input").value;
     const resultDisplay = document.getElementById("result");
@@ -14,8 +24,6 @@ async function checkFlag() {
     const wrongSound = document.getElementById("wrong-sound");
     const duplicateSound = document.getElementById("duplicate-sound");  
     const container = document.querySelector(".container");
-
-    let submittedFlags = JSON.parse(localStorage.getItem('submittedFlags')) || [];
 
     if (submittedFlags.includes(flagInput)) {
         resultDisplay.textContent = "Flag already submitted";
@@ -26,7 +34,7 @@ async function checkFlag() {
     }
 
     try {
-        const response = await fetch("https://capturetheflag-nf0x.onrender.com/validate-flag", {     // server connection, lol
+        const response = await fetch(API_URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
