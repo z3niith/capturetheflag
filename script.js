@@ -12,7 +12,7 @@ async function checkFlag() {
     const resultDisplay = document.getElementById("result");
     const correctSound = document.getElementById("correct-sound");
     const wrongSound = document.getElementById("wrong-sound");
-    const duplicateSound = document.getElementById("duplicate-sound");  
+    const duplicateSound = document.getElementById("duplicate");  
     const container = document.querySelector(".container");
 
     let submittedFlags = JSON.parse(localStorage.getItem('submittedFlags')) || [];
