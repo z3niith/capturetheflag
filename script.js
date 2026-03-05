@@ -12,7 +12,7 @@ async function checkFlag() {
     const resultDisplay = document.getElementById("result");
     const correctSound = document.getElementById("correct-sound");
     const wrongSound = document.getElementById("wrong-sound");
-    const duplicateSound = document.getElementById("duplicate-sound");  
+    const duplicateSound = document.getElementById("duplicate-sound");  // sound broken lowkey
     const container = document.querySelector(".container");
 
     let submittedFlags = JSON.parse(localStorage.getItem('submittedFlags')) || [];
@@ -38,9 +38,9 @@ async function checkFlag() {
 
         console.log(data);
 
-        if (response.ok) {
+        if (response.ok) { // need to add code for duplicate_audio.mp3
             resultDisplay.innerHTML = 
-                'Correct flag!<a href="https://www.linkedin.com/in/elenge-germain-5ab8b2319/" target="_blank"><br><strong> connect with me</strong></a>';
+                'Correct flag!<a href="https://www.linkedin.com/in/elengegermain" target="_blank"><br><strong> connect with me</strong></a>';
             resultDisplay.style.color = "violet";
             correctSound.play();
 
