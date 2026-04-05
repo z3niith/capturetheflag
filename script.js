@@ -1,17 +1,21 @@
-let score = 0;
+// Load persisted score from localStorage on page load
+let score = parseInt(localStorage.getItem('score')) || 0;
 
 function updateScore() {
     const scoreDisplay = document.getElementById("score");
     scoreDisplay.textContent = `Score: ${score}`;
-
+    localStorage.setItem('score', score);
 }
 
-localStorage()
+// Initialize score display on load
+document.addEventListener('DOMContentLoaded', () => updateScore());
+
 async function checkFlag() {
     const flagInput = document.getElementById("flag-input").value;
     const resultDisplay = document.getElementById("result");
     const correctSound = document.getElementById("correct-sound");
     const wrongSound = document.getElementById("wrong-sound");
+    const errorSound = document.getElementById("error-sound");
     const duplicateSound = document.getElementById("duplicate-sound");  // sound broken lowkey
     const container = document.querySelector(".container");
 
@@ -59,6 +63,9 @@ async function checkFlag() {
         console.error("Error validating flag:", error);
         resultDisplay.textContent = "Something went wrong. Please try again later.";
         resultDisplay.style.color = "orange";
+        errorSound.play();
+        resultDisplay.style.opacity = 1;
+        return;
     }
 
     updateScore();
@@ -69,10 +76,5 @@ async function checkFlag() {
     setTimeout(() => {
         resultDisplay.style.opacity = 0;
         container.classList.remove("grow");
-        container.classList.add("shrink");
-
-        setTimeout(() => {
-            container.classList.remove("shrink");
-        }, 300);
     }, 2000);
 }
