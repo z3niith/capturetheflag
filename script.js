@@ -1,4 +1,3 @@
-// Load persisted score from localStorage on page load
 let score = parseInt(localStorage.getItem('score')) || 0;
 
 function updateScore() {
@@ -7,7 +6,6 @@ function updateScore() {
     localStorage.setItem('score', score);
 }
 
-// Initialize score display on load
 document.addEventListener('DOMContentLoaded', () => updateScore());
 
 async function checkFlag() {
@@ -16,7 +14,7 @@ async function checkFlag() {
     const correctSound = document.getElementById("correct-sound");
     const wrongSound = document.getElementById("wrong-sound");
     const errorSound = document.getElementById("error-sound");
-    const duplicateSound = document.getElementById("duplicate-sound");  // sound broken lowkey
+    const duplicateSound = document.getElementById("duplicate-sound");
     const container = document.querySelector(".container");
 
     let submittedFlags = JSON.parse(localStorage.getItem('submittedFlags')) || [];
@@ -26,11 +24,11 @@ async function checkFlag() {
         resultDisplay.style.color = "orange";
         resultDisplay.style.opacity = 1;
         duplicateSound.play();
-        return; 
+        return;
     }
 
     try {
-        const response = await fetch("https://capturetheflag-nf0x.onrender.com/validate-flag", {     // server connection, lol
+        const response = await fetch("https://capturetheflag-nf0x.onrender.com/validate-flag", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -42,8 +40,8 @@ async function checkFlag() {
 
         console.log(data);
 
-        if (response.ok) { // need to add code for duplicate_audio.mp3
-            resultDisplay.innerHTML = 
+        if (response.ok) {
+            resultDisplay.innerHTML =
                 'Correct flag!<a href="https://www.linkedin.com/in/elengegermain" target="_blank"><br><strong> connect with me</strong></a>';
             resultDisplay.style.color = "violet";
             correctSound.play();

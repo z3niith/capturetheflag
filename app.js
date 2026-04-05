@@ -5,13 +5,11 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Only allow requests from the GitHub Pages site
 const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN || "https://z3niith.github.io";
 
 app.use(cors({ origin: ALLOWED_ORIGIN }));
 app.use(express.json());
 
-// Simple in-memory rate limiter: max 15 submissions per IP per minute
 const rateLimit = {};
 function limitRate(req, res, next) {
     const ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
