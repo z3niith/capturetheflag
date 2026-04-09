@@ -1,17 +1,12 @@
-# Dependencies
 node_modules/
 
-# Environment variables — NEVER commit real flags
 flags.env
 .env
 
-# The generated output of challenge 3 (players should run generate_flag.py locally)
 link.txt
 
-# macOS
 .DS_Store
 
-# Python
 __pycache__/
 *.pyc
 .venv/
